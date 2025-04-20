@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 
 @ControllerAdvice
-public class MyExceptionHandler {
+public class NeoflexExceptionHandler {
 
     @ExceptionHandler(InvalidInputException.class)
     public ResponseEntity<String> handle(InvalidInputException exc) {
