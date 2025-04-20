@@ -1,6 +1,7 @@
 package com.example.neoflex.vacationcalculator;
 
 import com.example.neoflex.exceptions.InvalidInputException;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.text.DecimalFormat;
@@ -21,7 +22,7 @@ public class VacationCalculatorService {
      * @param vacationDays количество дней отпуска
      * @return
      */
-    public double calculacteVacationPay(double averageSalary, int vacationDays) {
+    public double calculacteVacationPay(@NonNull double averageSalary, @NonNull int vacationDays) {
         if (averageSalary < 0 || averageSalary > MAX_AVERAGE_SALARY) {
             throw new InvalidInputException("Average salary must be between 0 and 100.000.000");
         }
